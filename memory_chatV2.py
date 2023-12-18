@@ -53,11 +53,11 @@ def main():
 
         # Define if is is the first time the user enters the session or not:
         if "first_refresh_session" not in st.session_state:
-            print("No session state")
+            st.write("No session state")
             st.session_state.first_refresh_session = True
         else:
-            print("Session state already fill:")
-            print(st.session_state.first_refresh_session)
+            st.write("Session state already fill:")
+            st.write(st.session_state.first_refresh_session)
             st.session_state.first_refresh_session = False
 
         st.title("Asitente virtual Herogra")
@@ -75,9 +75,9 @@ def main():
 
         input_text = st.chat_input("Pregunta al asistente...")
 
-        print("Input text:")
-        print(input_text)
-        print("End input text")
+        st.write("Input text:")
+        st.write(input_text)
+        st.write("End input text")
 
         if input_text:
             with st.spinner("Generating response..."):
