@@ -1,0 +1,371 @@
+CREATE (:Producto {name: 'AAR315-4+2+6 AZUFRE NA FERTIGOTA'})
+
+CREATE (:Seccion {name: 'Sección 1 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'IDENTIFICACIÓN DE LA SUSTANCIA O LA MEZCLA Y DE LA SOCIEDAD O LA EMPRESA DE AAR315-4+2+6 AZUFRE NA FERTIGOTA El producto químico identificado es el 4+2+6 Azufre Na Fertiligota (Código AAR315), utilizado como fertilizante.
+No se recomienda su uso para fines distintos a los aconsejados. El proveedor responsable de la ficha de datos
+de seguridad es HEROGRA FERTILIZANTES S.A, ubicado en el Polígono Juncaril C/Loja S/N, 18220 -
+Albolote, Granada. La empresa puede ser contactada a través del teléfono +34958490007, el fax 958490139,
+el correo electrónico info@herogra.com y el sitio web www.herografertilizantes.com. Además, se proporciona
+un teléfono de emergencia disponible las 24 horas: 915620420.'})
+
+CREATE (:Seccion {name: 'Sección 2 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'IDENTIFICACIÓN DE LOS PELIGROS DE AAR315-4+2+6 AZUFRE NA FERTIGOTA
+Según el Reglamento (EU) No 1272/2008, esta sustancia se clasifica como Eye Dam. 1, lo cual significa que
+provoca lesiones oculares graves, y Skin Corr. 1, lo cual significa que provoca quemaduras graves en la piel y
+lesiones oculares graves. El etiquetado del producto incluye el pictograma de peligro y la palabra de
+advertencia "Peligro". También se mencionan las siguientes frases de advertencia: "Provoca quemaduras
+graves en la piel y lesiones oculares graves", "No respirar el polvo/el humo/el gas/la niebla/los vapores/el
+aerosol", "Lavarse concienzudamente tras la manipulación" y "Llevar guantes/ropa de protección/equipo de
+protección para los ojos/la cara/los oídos/...". En caso de contacto con la piel, se debe quitar inmediatamente
+toda la ropa contaminada y enjuagar la piel con agua. En caso de contacto con los ojos, se deben enjuagar con
+agua durante varios minutos y quitar las lentes de contacto si es posible. Se recomienda llamar
+inmediatamente a un centro de toxicología o médico. El producto contiene ácido fosfórico al y ácido
+ortofosfórico al. En condiciones normales de uso y en su forma original, el producto no representa ningún otro
+riesgo para la salud y el medio ambiente.'})
+
+CREATE (:Seccion {name: 'Sección 3 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'COMPOSICIÓN/INFORMACIÓN SOBRE LOS COMPONENTES DE AAR315-4+2+6 AZUFRE
+NA FERTIGOTA. El producto químico en cuestión no contiene sustancias peligrosas según el Reglamento (CE) No. 1272/2008. Sin embargo, contiene ácido fosfórico al, o ácido ortofosfórico al, en una concentración del 1 al 10%. Este
+ácido está clasificado como Skin Corr. 1B, H314, lo que significa que puede causar daño en la piel. También se
+deben tener en cuenta los límites de concentración específicos: Skin Corr. 1B, H314 para concentraciones
+mayores o iguales al 25%, Skin Irrit. 2, H315 para concentraciones entre el 10% y menos del 25%, y Eye Irrit.
+2, H319 para concentraciones entre el 10% y menos del 25%. Se recomienda consultar la sección 16 de la
+ficha de seguridad para obtener información detallada sobre las frases H relacionadas con el producto. [1] Este
+producto contiene una sustancia que está sujeta a un límite de exposición comunitario en el lugar de trabajo
+(ver sección 8.1).'})
+
+CREATE (:Seccion {name: 'Sección 4 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'PRIMEROS AUXILIOS DE AAR315-4+2+6 AZUFRE NA FERTIGOTA. En caso de duda o persistencia de malestar, se debe buscar atención médica sin administrar nada por vía oral a personas inconscientes. En caso de inhalación, se debe trasladar a la persona al aire libre, mantenerla
+caliente y en reposo, y practicar respiración artificial si la respiración es irregular o se detiene. Para el contacto
+con los ojos, se debe lavar abundantemente con agua limpia durante al menos 10 minutos, tirando hacia arriba
+de los párpados y buscar asistencia médica, evitando que la persona se frote el ojo afectado. En caso de
+contacto con la piel, se debe quitar la ropa contaminada y lavar la piel vigorosamente con agua y jabón, sin
+utilizar disolventes o diluyentes. En caso de ingestión accidental, se debe buscar atención médica de inmediato
+y mantener a la persona en reposo, evitando provocar el vómito. El producto es corrosivo y puede causar
+quemaduras en contacto con los ojos o la piel, así como daños internos por ingestión o inhalación, por lo que
+se requiere atención médica inmediata. Contacto con los ojos puede causar daños irreversibles. En caso de
+accidente, se debe solicitar ayuda médica de inmediato, no administrar nada por vía oral a personas
+inconscientes y no provocar el vómito. Si la persona vomita, se deben despejar las vías respiratorias y cubrir la
+zona afectada con un apósito estéril seco, protegiéndola de presión o fricción.'})
+
+CREATE (:Seccion {name: 'Sección 5 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'MEDIDAS DE LUCHA CONTRA INCENDIOS DE AAR315-4+2+6 AZUFRE NA FERTIGOTA. El producto no presenta riesgos específicos en caso de incendio. Los medios de extinción apropiados son polvo extintor, CO2, espuma resistente al alcohol y agua pulverizada en caso de incendios más graves. No se
+debe utilizar chorro directo de agua para extinguir el fuego y no es aceptable usar agua o espuma en presencia
+de tensión eléctrica. El fuego puede producir humo negro y generar productos peligrosos como monóxido decarbono y dióxido de carbono. La exposición a los productos de combustión o descomposición puede ser
+perjudicial para la salud. Se recomienda refrigerar con agua los tanques, cisternas o recipientes cercanos al
+fuego y tener en cuenta la dirección del viento. Además, se deben evitar que los productos utilizados en la
+lucha contra incendios se filtren a desagües, alcantarillas o cursos de agua. Dependiendo de la magnitud del
+incendio, puede ser necesario utilizar trajes de protección calor, equipo respiratorio autónomo,
+guantes, gafas protectoras o máscaras faciales y botas.'})
+
+CREATE (:Seccion {name: 'Sección 6 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'MEDIDAS EN CASO DE VERTIDO ACCIDENTAL DE AAR315-4+2+6 AZUFRE NA FERTIGOTA En cuanto a las precauciones personales, equipo de protección y procedimientos de emergencia, es importante consultar la sección 8 para obtener información detallada. Además, se deben tomar medidas para evitar la contaminación del medio ambiente, evitando la entrada del producto en desagües, aguas superficiales o subterráneas, así como en el suelo. En caso de derrame, se debe contener y recoger con material
+absorbente inerte, y la zona debe limpiarse de inmediato con un descontaminante adecuado. Los residuos
+deben ser depositados en envases cerrados y apropiados para su eliminación de acuerdo con las normativas
+locales y nacionales, como se indica en la sección 13.'})
+
+CREATE (:Seccion {name: 'Sección 7 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'MANIPULACIÓN Y ALMACENAMIENTO DE AAR315-4+2+6 AZUFRE NA FERTIGOTA. 7.1 Precauciones para una manipulación segura: es importante seguir las medidas de protección personal indicadas en la sección 8. Además, no se debe fumar, comer ni beber en la zona de aplicación. Cumplir con la
+legislación de seguridad e higiene en el trabajo y nunca aplicar presión para vaciar los envases.
+7.2 Condiciones de almacenamiento seguro, incluidas posibles incompatibilidades: almacenar según la
+legislación local y seguir las indicaciones de la etiqueta. Los envases deben ser almacenados entre 5 y 25 ºC
+en un lugar seco, bien ventilado y lejos de fuentes de calor y luz solar directa. Mantener alejado de puntos de
+ignición, agentes oxidantes y materiales fuertemente ácidos o alcalinos. No fumar y evitar la entrada de
+personas no autorizadas. Al abrir los envases, asegurarse de cerrarlos cuidadosamente y colocarlos en
+posición vertical para evitar derrames. El producto no está sujeto a la Directiva 2012/18/UE (SEVESO III). 7.3 Usos específicos finales: no se dispone de información sobre usos específicos finales.'})
+
+CREATE (:Seccion {name: 'Sección 8 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'CONTROLES DE EXPOSICIÓN/PROTECCIÓN INDIVIDUAL DE AAR315-4+2+6 AZUFRE NA
+FERTIGOTA. Los límites de exposición durante el trabajo para el ácido fosfórico al (N. CAS 7664-38-2) en España son de 1 ppm (valor límite de ocho horas) y 2 ppm (valor límite a corto plazo), según los Valores Límite Ambientales de
+Exposición Profesional adoptados por el Instituto Nacional de Seguridad y Salud en el Trabajo (INSST) para el
+año 2021. Según las normas de la Unión Europea, los valores límite son de 1 mg/m3 (valor límite de ocho
+horas) y 2 mg/m3 (valor límite a corto plazo). El producto no contiene sustancias con valores límite biológicos.
+Los niveles de concentración DNEL/DMEL para el ácido fosfórico al son de 1 mg/m3 para la inhalación crónica
+y efectos locales. Se deben tomar medidas de control de exposición, como proporcionar una ventilación
+adecuada, utilizar protección respiratoria según las normas CEN (filtro A2), protección de manos con guantes
+no desechables marcados CE y protección ocular con gafas de montura integral marcadas CE. Además, se
+recomienda utilizar ropa de protección contra productos químicos marcada CE y calzado de seguridad
+resistente a productos químicos y con propiedades antiestáticas, también marcado CE, siguiendo las normas
+CEN especificadas. Se debe tener en cuenta el mantenimiento y la sustitución periódica de los equipos de
+protección personal, así como seguir los procedimientos de limpieza y conservación proporcionados por el
+fabricante. El ácido fosfórico al no debe almacenarse en lugares expuestos a temperaturas elevadas y
+ambientes húmedos antes de su utilización.'})
+
+CREATE (:Seccion {name: 'Sección 9 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'PROPIEDADES FÍSICAS Y QUÍMICAS DE AAR315-4+2+6 AZUFRE NA FERTIGOTA. El producto químico es un líquido de olor y color característico, con una apariencia de líquido transparente. El olor se asemeja al de los fertilizantes. El pH del producto es de 0.17 cuando está al 100%. No se dispone de información sobre el punto de fusión, el punto/intervalo de ebullición, el punto de inflamación, la tasa de
+evaporación, la inflamabilidad (sólido, gas), el límite inferior de explosión, el límite superior de explosión, la
+presión de vapor, la densidad de vapor, la solubilidad o la liposolubilidad. La densidad relativa es de 1.17 g/cc
+a 20.0°C. No se dispone de información sobre la hidrosolubilidad, el coeficiente de reparto (n-octanol/agua), la
+temperatura de autoinflamación, la temperatura de descomposición, la viscosidad, las propiedades explosivaso las propiedades comburentes. El punto de gota, el centelleo, la viscosidad cinemática y el porcentaje de sólidos también son desconocidos. Esto se debe a la naturaleza del producto.'})
+
+CREATE (:Seccion {name: 'Sección 10 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'ESTABILIDAD Y REACTIVIDAD. DE AAR315-4+2+6 AZUFRE NA FERTIGOTA. El producto químico no presenta peligros debido a su reactividad y es inestable en contacto con bases,
+pudiendo producirse una neutralización. Se deben evitar las bases y el contacto con ellas, ya que pueden
+generar productos de descomposición como vapores o gases corrosivos.'})
+
+CREATE (:Seccion {name: 'Sección 11 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'INFORMACIÓN TOXICOLÓGICA. DE AAR315-4+2+6 AZUFRE NA FERTIGOTA
+Las salpicaduras en los ojos pueden causar irritación y daños reversibles. En términos de toxicidad aguda, se
+ha determinado que el ácido fosfórico al y el ácido ortofosfórico al tienen una LD50 de 1530 mg/kg bw en ratas
+y una LD50 de 2740 mg/kg bw en conejos. Además, se informa de una LC50 de 25.5 mg/m³ de aire en ratones.
+El producto se clasifica como corrosivo cutáneo, categoría 1, lo que significa que puede causar quemaduras
+graves en la piel y lesiones oculares graves. También se clasifica como lesión ocular grave, categoría 1, lo que
+implica que puede provocar lesiones oculares graves. No hay datos concluyentes sobre la sensibilización
+respiratoria o cutánea, mutagenicidad en células germinales, carcinogenicidad, toxicidad para la reproducción,
+toxicidad específica en determinados órganos (STOT) en exposición única o repetida, y peligro por aspiración.'})
+
+CREATE (:Seccion {name: 'Sección 12 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'INFORMACIÓN ECOLÓGICA. DE AAR315-4+2+6 AZUFRE NA FERTIGOTA
+El ácido fosfórico al, también conocido como ácido ortofosfórico al, tiene un número CAS de 7664-38-2 y un
+número CE de 231-633-2. En cuanto a su toxicidad, se han realizado ensayos de ecotoxicidad en diferentes
+especies. En peces, se encontró una LC50 de 75.1 mg/L en un período de 96 horas. En invertebrados
+acuáticos, específicamente en la especie Dafnia magna, se obtuvo una EC50 de >100 mg/L en 48 horas. En
+plantas acuáticas, como Desmodesmus subspicatus, se registró una EC50 de >100 mg/L en 72 horas. No se
+dispone de información sobre la biodegradabilidad de las sustancias presentes ni sobre su potencial de
+bioacumulación. Tampoco hay información sobre la degradabilidad del producto ni sobre su movilidad en el
+suelo. No se recomienda verter el producto en alcantarillas o cursos de agua y se debe evitar su penetración
+en el terreno. No se dispone de información sobre la valoración PBT y mPmB del producto ni sobre otros
+efectos adversos para el medio ambiente.'})
+
+CREATE (:Seccion {name: 'Sección 12 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'CONSIDERACIONES RELATIVAS A LA ELIMINACIÓN. DE AAR315-4+2+6 AZUFRE NA
+FERTIGOTA Se prohíbe el vertido del producto en alcantarillas o cursos de agua. Los residuos y envases vacíos deben ser
+manipulados y eliminados según las leyes locales/nacionales aplicables. Es necesario cumplir con las
+disposiciones de la Directiva 2008/98/CE en cuanto a la gestión de residuos.'})
+
+CREATE (:Seccion {name: 'Sección 14 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'INFORMACIÓN RELATIVA AL TRANSPORTE. DE AAR315-4+2+6 AZUFRE NA FERTIGOTA
+El transporte de este producto químico debe realizarse siguiendo las normas ADR/TPC para el transporte por
+carretera, RID para el transporte por ferrocarril, IMDG por mar y ICAO/IATA para transporte aéreo. Para el
+transporte terrestre, se requiere cumplir con las regulaciones ADR y RID. La documentación necesaria incluye
+una carta de porte e instrucciones escritas. Para el transporte marítimo, se debe seguir el código IMDG y se
+requiere un conocimiento de embarque. En el caso del transporte aéreo, se deben seguir las normas
+IATA/ICAO y se necesita un conocimiento aéreo. El producto está clasificado como UN1760, líquido corrosivo,
+y pertenece a la clase 8 de peligro para el transporte. El grupo de embalaje es I. No es un contaminante marino
+y requiere etiquetas de peligro 8. No existen limitaciones de cantidad para su transporte según las regulaciones
+ADR, IMDG e ICAO. No está autorizado el transporte a granel según el ADR, y en caso de emergencia se
+deben seguir las indicaciones de las fichas de emergencia. Este producto no se ve afectado por el transporte a
+granel en buques según el Convenio MARPOL y el Código IBC.'})
+
+CREATE (:Seccion {name: 'Sección 15 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'INFORMACIÓN REGLAMENTARIA. DE AAR315-4+2+6 AZUFRE NA FERTIGOTA
+La sustancia en cuestión no está sujeta a regulaciones específicas de seguridad, salud y medio ambiente,
+como el Reglamento sobre sustancias que agotan la capa de ozono, la Directiva SEVESO III, el Reglamento
+sobre biocidas y el Reglamento sobre la exportación e importación de productos químicos peligrosos. Sin
+embargo, existen restricciones en la fabricación, comercialización y uso del nitrato de amonio, que incluyenlimitaciones en la concentración de nitrógeno y destinos específicos de venta. Estas restricciones pueden variar dentro de los Estados miembros por razones socioeconómicas. No se ha realizado una evaluación de
+seguridad química del producto. Información adicional se detalla en los Anexos del Reglamento sobre la
+comercialización y uso de precursores de explosivos. Además, se debe notificar cualquier transacción
+sospechosa, desaparición o robo significativo al CITCO en un plazo de 24 horas.'})
+
+CREATE (:Seccion {name: 'Sección 16 AAR315-4+2+6 AZUFRE NA FERTIGOTA', text: 'OTRA INFORMACIÓN. DE AAR315-4+2+6 AZUFRE NA FERTIGOTA
+El producto químico tiene las siguientes clasificaciones: H314: provoca quemaduras graves en la piel y
+lesiones oculares graves. H315: provoca irritación cutánea. H319: provoca irritación ocular grave. Además, se
+han realizado cambios en la información del proveedor y en los valores de las propiedades físico-químicas en
+comparación con la versión anterior de la ficha técnica. Se recomienda recibir formación básica sobre
+seguridad e higiene laboral para manipular correctamente el producto. Se proporcionan diversas abreviaturas y
+acrónimos utilizados, como ADR, CEN, DNEL, EC50, EPI, IATA, ICAO, IMDG, LC50, LD50 y RID. Se hacen
+referencias bibliográficas y se indica que la información de la ficha de seguridad se basa en los conocimientos
+actuales y en las leyes vigentes. Es responsabilidad del usuario cumplir con las regulaciones aplicables.'})
+
+CREATE (:Producto {name: 'AAR315-4+2+6 EXTRA NA-V FERTIGOTA'})
+
+CREATE (:Seccion {name: 'Sección 1 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'IDENTIFICACIÓN DE LA SUSTANCIA O LA MEZCLA Y DE LA SOCIEDAD O LA EMPRESA DE
+AAR315-4+2+6 EXTRA NA-V FERTIGOTA. El producto químico identificado es el 4+2+6 EXTRA NA-V FERTIGOTA, con el código AAR315 y el UFI F5F1-40AS-C00A-S2RY. Se utiliza como fertilizante, mientras que el uso desaconsejado es cualquier otro uso
+diferente al recomendado. El proveedor de la ficha de datos de seguridad es HEROGRA FERTILIZANTES S.A,
+ubicado en el Polígono Juncaril C/Loja S/N, 18220 - Albolote, Granada. El teléfono de contacto es
++34958490007, el fax es 958490139, el correo electrónico es info@herogra.com y la página web es
+www.herografertilizantes.com. En caso de emergencia, se puede llamar al teléfono 915620420, disponible las
+24 horas.'})
+
+CREATE (:Seccion {name: 'Sección 2 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'IDENTIFICACIÓN DE LOS PELIGROS DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA
+Según el Reglamento (CE) No 1272/2008, esta sustancia o mezcla se clasifica como Eye Dam.1, lo cual
+significa que puede provocar lesiones oculares graves, y como Skin Corr.1, lo cual implica que puede provocar
+quemaduras graves en la piel y lesiones oculares graves. El etiquetado conforme a este reglamento incluye los
+pictogramas y la palabra de advertencia "Peligro". Las indicaciones de peligro específicas son que esta
+sustancia provoca quemaduras graves en la piel y lesiones oculares graves. Se proporcionan consejos de
+prudencia, como no respirar el polvo, el humo, el gas, la niebla, los vapores o el aerosol, lavarse las manos y
+cualquier parte del cuerpo que haya estado en contacto con el producto, y usar guantes, ropa de protección y
+equipo de protección para los ojos, la cara y los oídos. Se mencionan también las acciones a tomar en caso de
+contacto con la piel o los ojos, como enjuagar con agua y, en caso de contacto con la piel, quitar
+inmediatamente la ropa contaminada y llamar a un centro de toxicología o médico. La sustancia contiene ácido
+fosfórico y ácido ortofosfórico. No se clasifica como PBT, mPmB o con propiedades de alteración endocrina.
+En condiciones normales de uso y en su forma original, el producto no tiene ningún otro efecto negativo para la
+salud y el medio ambiente.'})
+
+CREATE (:Seccion {name: 'Sección 3 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'COMPOSICIÓN/INFORMACIÓN SOBRE LOS COMPONENTES. DE AAR315-4+2+6 EXTRA
+NA-V FERTIGOTA El producto químico en cuestión no contiene sustancias peligrosas. Sin embargo, las mezclas presentes en el
+producto están clasificadas como peligrosas de acuerdo con el Reglamento (CE) No. 1272/2008. Estas
+mezclas incluyen nitrato de amonio en una concentración del 1 al 10% y ácido fosfórico en una concentración
+del 1 al 10%. El nitrato de amonio está clasificado como irritante ocular de categoría 2 y sólido oxidante de
+categoría 3, mientras que el ácido fosfórico está clasificado como corrosivo para la piel de categoría 1B. El
+ácido fosfórico también tiene la clasificación de irritante dérmico de categoría 2 y irritante ocular de categoría 2.
+Es importante tener en cuenta que se proporciona información adicional sobre las frases H en la sección 16 de
+esta ficha técnica. El ácido fosfórico tiene un límite de exposición en el lugar de trabajo según la Unión
+Europea (ver sección 8.1).'})
+
+CREATE (:Seccion {name: 'Sección 4 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'PRIMEROS AUXILIOS DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA. En caso de duda o síntomas persistentes, buscar atención médica. Para inhalación, sacar a la persona al aire libre, mantenerla caliente y en reposo, y practicar respiración artificial si es necesario. En caso de contacto con
+los ojos, enjuagar con agua limpia durante al menos 10 minutos y buscar atención médica sin frotar el ojo
+afectado. En contacto con la piel, quitar la ropa contaminada y lavar vigorosamente con agua y jabón sin
+utilizar disolventes. En caso de ingestión, buscar atención médica inmediata, mantenerse en reposo sin
+provocar el vómito. El producto es corrosivo y puede causar quemaduras en los ojos y la piel, daños internos
+en caso de ingestión o inhalación, por lo que se requiere atención médica inmediata. Buscar ayuda médica de
+inmediato, no administrar nada por vía oral a personas inconscientes, no inducir el vómito y cubrir la zona
+afectada con un apósito estéril seco y protegerla de presión o fricción.'})
+
+CREATE (:Seccion {name: 'Sección 5 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'MEDIDAS DE LUCHA CONTRA INCENDIOS DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA
+El producto no está clasificado como inflamable. En caso de incendio, se recomienda utilizar medios de
+extinción como polvo extintor, CO2, espuma resistente al alcohol y agua pulverizada. No se debe usar chorro
+directo de agua ni agua o espuma en presencia de tensión eléctrica. La exposición a los productos de
+combustión o descomposición puede ser perjudicial para la salud. Se recomienda refrigerar con agua los
+tanques cercanos al fuego, tener en cuenta la dirección del viento y evitar que los productos utilizados en la
+lucha contra incendios pasen a desagües o cursos de agua. Según la magnitud del incendio, es necesarioutilizar trajes de protección contra el calor, equipo respiratorio autónomo, guantes, gafas protectoras y botas.'})
+
+CREATE (:Seccion {name: 'Sección 6 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'MEDIDAS EN CASO DE VERTIDO ACCIDENTAL DE AAR315-4+2+6 EXTRA NA-V
+FERTIGOTA. Las precauciones personales, el equipo de protección y los procedimientos de emergencia se detallan en la sección 6.1, donde se indica que se deben seguir las medidas de control de exposición y protección individual
+mencionadas en la sección 8. Además, en la sección 6.2 se establece que el producto no se clasifica como
+peligroso para el medio ambiente, pero se deben evitar los vertidos. En cuanto a los métodos de contención y
+limpieza, en la sección 6.3 se recomienda contener y recoger cualquier vertido con material absorbente inerte,
+limpiar la zona de inmediato con un descontaminante adecuado y depositar los residuos en envases cerrados
+adecuados para su eliminación según las normativas locales y nacionales, también mencionadas en la sección
+13. Se hace referencia nuevamente en la sección 6.4 a la sección 8 para las medidas de protección individual y
+a la sección 13 para la eliminación de los residuos.'})
+
+CREATE (:Seccion {name: 'Sección 7 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'MANIPULACIÓN Y ALMACENAMIENTO DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA. Las precauciones para una manipulación segura incluyen protección personal de acuerdo a la sección 8, la prohibición de fumar, comer y beber en la zona de aplicación, el cumplimiento de la legislación de seguridad e
+higiene laboral, y evitar emplear presión para vaciar los envases. Además, se recomienda almacenar el
+producto según la legislación local y seguir las indicaciones de la etiqueta. El almacenamiento debe ser entre 5
+y 25 ºC, en un lugar seco y bien ventilado, lejos de fuentes de calor y luz solar directa, puntos de ignición,
+agentes oxidantes, materiales fuertemente ácidos o alcalinos, y personas no autorizadas. Se debe cerrar
+cuidadosamente y colocar verticalmente los envases una vez abiertos para evitar derrames. El producto no
+está afectado por la Directiva 2012/18/UE (SEVESO III). No se especifican usos finales específicos.'})
+
+CREATE (:Seccion {name: 'Sección 8 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'CONTROLES DE EXPOSICIÓN/PROTECCIÓN INDIVIDUAL DE AAR315-4+2+6 EXTRA NA-V
+FERTIGOTA. En la sección de parámetros de control de la ficha técnica del producto químico, se establece el límite de
+exposición durante el trabajo para el ácido fosfórico, ácido ortofosfórico, con un valor límite de 1 mg/m³ para
+una exposición de ocho horas tanto para España como para la Unión Europea. Además, se proporciona
+información sobre los niveles de concentración DNEL/DMEL para el nitrato de amonio, con un valor de 37,6
+mg/m³ para exposición crónica por inhalación en trabajadores. El producto no contiene sustancias con valores
+límite biológicos. También se mencionan los niveles de concentración PNEC para el nitrato de amonio en
+diferentes tipos de agua. En la sección de controles de exposición, se recomienda proporcionar una ventilación
+adecuada, usar protección respiratoria y guantes no desechables de protección contra productos químicos,
+entre otras medidas de protección. Se especifica qué tipo de máscara filtrante, guantes, gafas y ropa de
+protección deben utilizarse, así como las normas CEN correspondientes a cada EPI. Por último, se menciona
+el mantenimiento y las precauciones necesarias para el adecuado uso de cada equipo de protección personal.'})
+
+CREATE (:Seccion {name: 'Sección 9 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'PROPIEDADES FÍSICAS Y QUÍMICAS DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA. El producto químico es un líquido de color verde pálido. No tiene olor perceptible y no se pueden determinar el
+punto de fusión, punto de congelación, punto de ebullición, inflamabilidad, límite inferior y superior de
+explosión, punto de inflamación, temperatura de auto-inflamación ni temperatura de descomposición debido a
+la naturaleza o propiedades del producto. El pH es de 0,2 al 100%. La viscosidad cinemática, solubilidad,
+hidrosolubilidad, liposolubilidad, coeficiente de reparto (n-octanol/agua), presión de vapor, densidad absoluta y
+densidad de vapor no se pueden determinar debido a la naturaleza o propiedades del producto. La densidad
+relativa es de 1,17. No hay características particulares de las partículas. No hay otros datos disponibles debido
+a la naturaleza o propiedades del producto.'})
+
+CREATE (:Seccion {name: 'Sección 10 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'ESTABILIDAD Y REACTIVIDAD DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA. El producto químico es seguro y estable, no presenta peligros debido a su reactividad. Es importante manipularlo correctamente y evitar materiales incompatibles, como agentes oxidantes, fuertes ácidos o bases alcalinas, para evitar reacciones exotérmicas. Si se utiliza según las recomendaciones, el producto no se
+descompondrá y no generará productos peligrosos.'})
+
+CREATE (:Seccion {name: 'Sección 11 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'INFORMACIÓN TOXICOLÓGICA. DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA
+El producto químico presenta clases de peligro definidas en el Reglamento (CE) nº 1272/2008. Se ha
+determinado que las salpicaduras en los ojos pueden causar irritación y daños reversibles. En cuanto a la
+toxicidad, se han realizado ensayos con distintas sustancias presentes en la composición. El nitrato de amonio
+muestra una toxicidad aguda oral con valores de LD50 de 2220 mg/kg en ratas, 2950 mg/kg bw en ratas y
+2085 mg/kg bw en ratones. Además, el ácido fosfórico y el ácido ortofosfórico presentan toxicidad cutánea,
+inhalación y oral. En el caso del ácido fosfórico, se ha determinado una LC50 de >88.8 mg/L (4 h) en ratas y
+una LD50 de 1530 mg/kg bw en ratas. Por otro lado, se ha registrado una LD50 de 2740 mg/kg bw en conejos
+para el ácido ortofosfórico, así como una LC50 de 25.5 mg/m³ en el aire para el ratón. En cuanto a los demás
+peligros, se concluye que el producto no presenta conclusión clara en términos de corrosión o irritación
+cutánea, lesiones oculares graves o irritación ocular, sensibilización respiratoria o cutánea, mutagenicidad en
+células germinales, carcinogenicidad, toxicidad para la reproducción, toxicidad específica en determinados
+órganos (STOT) - exposición única, toxicidad específica en determinados órganos (STOT) - exposición
+repetida, ni peligro por aspiración. La información disponible no indica propiedades de alteración endocrina en
+el producto y no hay datos disponibles sobre otros efectos adversos para la salud.'})
+
+CREATE (:Seccion {name: 'Sección 12 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'INFORMACIÓN ECOLÓGICA DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA. El producto químico presenta una toxicidad específica en diferentes especies. Los valores de LC50 en peces acuáticos de agua dulce (Cyprinus carpio) varían entre 95 y 102 mg/l en un período de 48 horas. También se han realizado ensayos de toxicidad en invertebrados acuáticos utilizando Dafnia magna, donde se reportó una
+EC50 de 555 mg/l. Además, se ha evaluado la toxicidad en plantas acuáticas y se encontró una EC50 de 83
+mg/l en Scenedesmus quadricauda. Se ha informado sobre la persistencia, degradabilidad y bioacumulación
+del producto. No hay información disponible sobre la biodegradabilidad o degradabilidad de las sustancias
+presentes, pero se considera que el potencial de bioacumulación es muy bajo. No se han realizado
+evaluaciones PBT y mPmB sobre el producto. No se ha encontrado ninguna propiedad de alteración endocrina
+en los componentes del producto. Por último, el producto no se ve afectado por el Reglamento (CE) 1005/2009
+sobre sustancias que agotan la capa de ozono y no se dispone de información sobre otros efectos adversos
+para el medio ambiente.'})
+
+CREATE (:Seccion {name: 'Sección 13 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'CONSIDERACIONES RELATIVAS A LA ELIMINACIÓN DE AAR315-4+2+6 EXTRA NA-V
+FERTIGOTA. En cuanto al tratamiento de residuos, es importante tener en cuenta que no se debe verter el producto en
+alcantarillas o cursos de agua. Los residuos y envases vacíos deben manipularse y eliminarse de acuerdo con
+las legislaciones local/nacional vigentes. Además, es necesario cumplir con las disposiciones establecidas en
+la Directiva 2008/98/CE en relación a la gestión de residuos.'})
+
+CREATE (:Seccion {name: 'Sección 14 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'INFORMACIÓN RELATIVA AL TRANSPORTE. DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA
+Este producto cumple con las normas ADR/TPC para el transporte por carretera, las RID para el transporte por
+ferrocarril, las IMDG para el transporte por mar y las ICAO/IATA para el transporte aéreo. Los documentos de
+transporte requeridos incluyen la carta de porte e instrucciones escritas para el transporte por carretera, el
+conocimiento de embarque para el transporte por mar y el conocimiento aéreo para el transporte por aire. El
+número ONU o número ID asignado a este producto es UN1760. La designación oficial de transporte de las
+Naciones Unidas es "LÍQUIDO CORROSIVO, N.E.P. (CONTIENE ÁCIDO FOSFÓRICO AL ÁCIDO
+ORTOFOSFÓRICO AL), 8, GE I, (E)" según ADR/RID e IMDG. Según ICAO/IATA, el producto está clasificado
+como GE I y se describe como "LÍQUIDO CORROSIVO, N.E.P. (CONTIENE ÁCIDO FOSFÓRICO AL ÁCIDO
+ORTOFOSFÓRICO AL), 8". La clase de peligro para el transporte es la clase 8 y el grupo de embalaje es el
+grupo I. No representa un peligro para el medio ambiente en términos de contaminación marina. Las
+precauciones particulares para los usuarios incluyen el uso de etiquetas de clase 8 y el cumplimiento de las
+disposiciones de transporte a granel según corresponda. No se permite el transporte a granel según ADR. No
+hay cantidades limitadas para el transporte según ADR, IMDG e ICAO. El producto no está afectado por el
+transporte a granel en buques según los instrumentos de la OMI.'})
+
+CREATE (:Seccion {name: 'Sección 15 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'INFORMACIÓN REGLAMENTARIA. DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA
+El producto químico en cuestión no está afectado por el Reglamento (UE) No 528/2012 ni por el Reglamento
+(UE) No 649/2012. Sin embargo, existen restricciones en la fabricación, comercialización y uso de sustancias ymezclas peligrosas, como el nitrato de amonio. Estas restricciones incluyen que no se puede comercializar por
+primera vez después del 27 de junio de 2010 con más del 28% en peso de nitrógeno, a menos que cumpla con
+disposiciones técnicas establecidas. Además, no se puede comercializar con un 16% o más de nitrógeno
+después del 27 de junio de 2010, a menos que vaya destinado a usuarios intermedios, distribuidores,
+agricultores u otras actividades profesionales relacionadas. Los Estados miembros pueden aplicar
+restricciones socioeconómicas hasta el 1 de julio de 2014. En cuanto a la evaluación de la seguridad química
+del producto, no se ha llevado a cabo. Además, se proporciona información sobre la comercialización y uso de
+precursores de explosivos según los anexos I y II del Reglamento (UE) 2019/1148, incluyendo el nitrato de
+amonio. También se establece que todas las transacciones sospechosas, desapariciones y robos significativos
+deben notificarse al CITCO en un plazo de 24 horas.'})
+
+CREATE (:Seccion {name: 'Sección 16 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', text: 'OTRA INFORMACIÓN DE AAR315-4+2+6 EXTRA NA-V FERTIGOTA. Las frases H en la Sección 3 de la ficha técnica del producto químico H272, H314, H315 y H319 indican que puede agravar un incendio actuando como comburente, provoca quemaduras graves en la piel y lesiones oculares graves, y provoca irritación cutánea y ocular grave, respectivamente. La clasificación y los códigos
+utilizados para determinar las propiedades físicas y peligros para la salud de las mezclas según el Reglamento
+(CE) nº 1272/2008 también se mencionan. Además, se proporcionan modificaciones en la composición del
+producto, valores de propiedades físico-químicas y la información de las condiciones de estabilidad y
+reactividad en las secciones 3.2, 9 y 10.2-10.6, respectivamente. También se enfatiza la importancia de la
+formación en seguridad e higiene laboral para manipular correctamente el producto. Algunas abreviaturas y
+acrónimos utilizados se explican, y se mencionan las principales referencias bibliográficas y fuentes de datos.
+Finalmente, se establece que la información se basa en el Reglamento (UE) 2020/878 y se advierte que el uso
+del producto debe cumplir con las legislaciones aplicables, siendo responsabilidad del usuario tomar las
+medidas apropiadas.'})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+MATCH (producto:Producto {name: 'AAR315-4+2+6 AZUFRE NA FERTIGOTA'})
+WITH producto
+MATCH (seccion:Seccion)
+WHERE seccion.name IN [
+    'Sección 1 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 2 AAR315-4+2+6 AZUFRE NA FERTIGOTA', 
+    'Sección 3 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 4 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 5 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 6 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 7 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 8 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 9 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 10 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 11 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 12 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 13 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 14 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 15 AAR315-4+2+6 AZUFRE NA FERTIGOTA',
+    'Sección 16 AAR315-4+2+6 AZUFRE NA FERTIGOTA'
+]
+CREATE (seccion) -[:PERTENECE]-> (producto);
+
+MATCH (producto:Producto {name: 'AAR315-4+2+6 EXTRA NA-V FERTIGOTA'})
+WITH producto
+MATCH (seccion:Seccion)
+WHERE seccion.name IN [
+    'Sección 1 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 2 AAR315-4+2+6 EXTRA NA-V FERTIGOTA', 
+    'Sección 3 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 4 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 5 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 6 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 7 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 8 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 9 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 10 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 11 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 12 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 13 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 14 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 15 AAR315-4+2+6 EXTRA NA-V FERTIGOTA',
+    'Sección 16 AAR315-4+2+6 EXTRA NA-V FERTIGOTA'
+]
+CREATE (seccion) -[:PERTENECE]-> (producto);

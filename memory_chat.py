@@ -17,15 +17,17 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 
+from neo4j_utils.raw_text import herosol_multicolor, fertigota_suspension, azufre_na_fertigota
+
 # llm = OpenAI(openai_api_key="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")
 # Personal: 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
 
 # Streamlit cloud has some problems with the version of sqlite3. So we are adding to the requirements the package pysqlite3-binary and using them:
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+# __import__('pysqlite3')
+# import sys
+# sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
-def show_chat_history() -> None:
+def show_chat_history(icon) -> None:
 
     # If there is no chat history:
     if len(st.session_state.chat_history) == 0:
@@ -38,78 +40,87 @@ def show_chat_history() -> None:
             with st.chat_message("assistant", avatar=icon):
                 st.write(question_answer[1])
 
-logo = Image.open('images/gurit_logo.png')
-gpt_logo = Image.open("images/Chat_gpt_logo.png")
-icon = Image.open("images/gurit_icon.png")
+def main():
+    logo = Image.open('images/herogra_logo.png')
+    gpt_logo = Image.open("images/Chat_gpt_logo.png")
+    icon = Image.open("images/herogra_icon.png")
 
-st.set_page_config(page_icon=icon, page_title="Gurit chatbot")
+    st.set_page_config(page_icon=icon, page_title="Herogra assistant")
 
-# Define the chat history:
-if "chat_history" not in st.session_state:
-    st.session_state.chat_history = []
+    # Define the chat history:
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = []
 
-# Define if is is the first time the user enters the sessin or not:
-if "first_refresh_session" not in st.session_state:
-    st.session_state.first_refresh_session = True
-else:
-    st.session_state.first_refresh_session = False
+    # Define if is is the first time the user enters the sessin or not:
+    if "first_refresh_session" not in st.session_state:
+        st.session_state.first_refresh_session = True
+    else:
+        st.session_state.first_refresh_session = False
 
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
-st.title("Gurit virtual assistant")
+    st.title("Asistente virtual Herogra")
 
-st.image(logo, width=350)
+    st.image(logo, width=350)
+    #st.info("The chatbot works better with specific questions such as 'How can I create a prepayment sales order?'")
+    #st.info("The chatbot has memory too so if you have to ask a different question and it has no relation with the previous one it is better to reload the page to delete the history.")
 
-if st.session_state.first_refresh_session:
-    with st.spinner("Loading chatbot..."):
-        
-        documents = []
-        for file in os.listdir("chatbot_databases"):
-            pdf_path = "./chatbot_databases/" + file
-            loader = PyPDFLoader(pdf_path)
-            documents.extend(loader.load())
+    if st.session_state.first_refresh_session:
+        with st.spinner("Loading chatbot..."):
+            
+            documents = []
+            for file in os.listdir("data"):
+                pdf_path = "./data/" + file
+                loader = PyPDFLoader(pdf_path)
+                documents.extend(loader.load())
 
-        text_splitter = CharacterTextSplitter(chunk_size=10000, chunk_overlap=200) # chunk_size=1000, chunk_overlap=200
-        documents = text_splitter.split_documents(documents)
+            text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=200) # chunk_size=1000, chunk_overlap=200
+            documents = text_splitter.split_documents(documents)
 
-        embeddings = OpenAIEmbeddings()
-        vectorstore = Chroma.from_documents(documents, embeddings)
+            embeddings = OpenAIEmbeddings()
+            vectorstore = Chroma.from_documents(documents, embeddings)
 
-        memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
+            memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
-        # Store the qa in session state so it can be always accessed:
-        st.session_state.qa = ConversationalRetrievalChain.from_llm(
-            ChatOpenAI(model="gpt-3.5-turbo-16k"), 
-            vectorstore.as_retriever(), 
-            memory=memory
-        )
+            # Store the qa in session state so it can be always accessed:
+            st.session_state.qa = ConversationalRetrievalChain.from_llm(
+                ChatOpenAI(model="gpt-4"), 
+                vectorstore.as_retriever(search_type="similarity", k=3), 
+                memory=memory
+            )
 
-show_chat_history()
+    show_chat_history(icon)
 
-query = st.chat_input("Escribe tu consulta")
+    query = st.chat_input("Send a message")
 
-if query:
-    with st.spinner("Generando respuesta..."):
-        
-        # Get only th etwo lasts question and answers from the chat_history to avoid huge costs:
-        context = st.session_state.chat_history[-2:]
+    if query:
+        with st.spinner("Generating response..."):
+            
+            # Get only th etwo lasts question and answers from the chat_history to avoid huge costs:
+            context = st.session_state.chat_history[-2:]
 
-        # Generate the answer:
-        result = st.session_state.qa({"question": query, "chat_history": context})
+            # TO DELETE
+            # Add all the text from the Fichas:
+            # query = "Información de los productos: " + herosol_multicolor + fertigota_suspension + azufre_na_fertigota +" Pregunta: " + query_
+            # query = "Primera ficha: " + herosol_multicolor + "Segunda ficha: " + azufre_na_fertigota + " Pregunta: " + query_ + "Nota: Contesta siempre en forma de lista y por puntos."
 
-        # Show the question:
-        with st.chat_message("user"):
-            st.write(result["question"])
-        # Show the answer:
-        with st.chat_message("assistant", avatar=icon):
-            st.write(result["answer"])
-        
-        # Add the queries to the chat_history
-        st.session_state.chat_history.append((query, result["answer"]))
+            # Generate the answer:
+            result = st.session_state.qa({"question": query, "chat_history": context})
 
-with st.columns(2)[1]:
-    st.write("Powered by:")
-    st.image(gpt_logo, width=250)
+            # Show the question:
+            with st.chat_message("user"):
+                # st.write(query_)
+                st.write(result["question"])
+            # Show the answer:
+            with st.chat_message("assistant", avatar=icon):
+                st.write(result["answer"])
 
-# Noticies: https://teams.microsoft.com/l/message/19:meeting_NWQ1ODdlMGEtZDE2MS00NzJhLTg0NzYtYmY1NmNlZjQxZmJj@thread.v2/1694510592323?context=%7B%22contextType%22%3A%22chat%22%7D
-# https://www.dqsconsulting.com/noticias/categoria/dqsteam/
+            # Add the queries to the chat_history
+            st.session_state.chat_history.append((query, result["answer"]))
+
+    with st.columns(2)[1]:
+        st.write("Powered by:")
+        st.image(gpt_logo, width=250)
+
+if __name__ == "__main__":
+    main()
