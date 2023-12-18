@@ -69,8 +69,8 @@ def main():
         st.image(logo)
 
         # Prepare the assitant if it is the first session:
-        # For some reason streamlit cloud reruns the app 3 times before
-        if st.session_state.first_refresh_session == 3:
+        # For some reason streamlit cloud reruns the app 2 times before
+        if st.session_state.first_refresh_session == 2:
             print("We prepare the assistant")
             with st.spinner("Preparing the assistant..."):
                 st.session_state.semantic_query_engine = SemanticQueryEngine(
