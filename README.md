@@ -1,8 +1,5 @@
-# Herogras chatbot
+# Herogra chatbot
 This repo contains the implementation of a virtual assistant of Herogra
-
-## Data
-The data used in this proje
 
 ## Run the streamlit app
 

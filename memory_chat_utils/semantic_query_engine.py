@@ -2,8 +2,8 @@ import semantic_kernel as sk
 import streamlit as st
 
 from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion
-from prompts import QA_GENERATION_TEMPLATE_SK2
-from vector_database import VectorDatabase
+from memory_chat_utils.prompts import QA_GENERATION_TEMPLATE_SK2
+from memory_chat_utils.vector_database import VectorDatabase
 from typing import Tuple
 
 class SemanticQueryEngine:

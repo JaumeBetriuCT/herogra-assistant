@@ -108,7 +108,7 @@ class VectorDatabase:
 
         return output_string
 
-    def run_query(self, query: str, k: int=10, threshold: float=0.3) -> str:
+    def run_query(self, query: str, k: int=20, threshold: float=0.1) -> str:
         """
         From the k chunks of text with highest similarity to the query
         """
@@ -116,6 +116,9 @@ class VectorDatabase:
         
         # Return the k most similar chunks:
         k_similar_chunks = self.vectorstore.similarity_search_with_score(query, k)
+
+        print("RAW DATABASE OUTPUT:")
+        print(k_similar_chunks)
 
         # Iterate trough the similar chunks information and get the text, the source and the score:
         for chunk_info in k_similar_chunks:
