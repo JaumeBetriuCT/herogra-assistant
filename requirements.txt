@@ -7,3 +7,4 @@ streamlit-authenticator
 semantic-kernel
 pypdf
 tiktoken
+faiss-cpu
