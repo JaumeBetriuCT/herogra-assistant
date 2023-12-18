@@ -1,6 +1,4 @@
 import streamlit as st
-import yaml
-import streamlit_authenticator as stauth
 
 from memory_chat_utils.semantic_query_engine import SemanticQueryEngine
 from PIL import Image
@@ -29,89 +27,65 @@ def main():
 
     st.set_page_config(page_icon=icon, page_title="Herogra assistant")
 
-    with open("credentials.yaml") as file:
-        config = yaml.load(file, Loader=SafeLoader)
+    # Define the chat history:
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = []
 
-    authenticator = stauth.Authenticate(
-        config['credentials'],
-        config['cookie']['name'],
-        config['cookie']['key'],
-        config['cookie']['expiry_days'],
-        config['preauthorized']
-    )
+    # Define if is is the first time the user enters the session or not:
+    if "first_refresh_session" not in st.session_state:
+        st.write("No session state")
+        st.session_state.first_refresh_session = True
+    else:
+        st.write("Session state already fill:")
+        st.write(st.session_state.first_refresh_session)
+        st.session_state.first_refresh_session = False
 
-    name, authentication_status, username = authenticator.login('Login', 'main')
+    if "number_of_refreshes" not in st.session_state:
+        st.session_state.number_of_refreshes = 1
+    else:
+        st.session_state.number_of_refreshes += 1
 
-    print("Authentication status:")
-    print(authentication_status)
+    st.title("Asitente virtual Herogra")
+    st.image(logo)
 
-    if authentication_status:
+    # Prepare the assitant if it is the first session:
+    # For some reason streamlit cloud reruns the app 2 times before
+    if st.session_state.first_refresh_session:
+        print("We prepare the assistant")
+        with st.spinner("Preparing the assistant..."):
+            st.session_state.semantic_query_engine = SemanticQueryEngine(
+                data_path = "data/data_by_sections",
+                model_name = "gpt-4-32k"
+            )
 
-        # Define the chat history:
-        if "chat_history" not in st.session_state:
-            st.session_state.chat_history = []
+    show_chat_history(icon)
 
-        # Define if is is the first time the user enters the session or not:
-        if "first_refresh_session" not in st.session_state:
-            st.write("No session state")
-            st.session_state.first_refresh_session = True
-        else:
-            st.write("Session state already fill:")
-            st.write(st.session_state.first_refresh_session)
-            st.session_state.first_refresh_session = False
+    st.write(st.session_state.number_of_refreshes)
 
-        if "number_of_refreshes" not in st.session_state:
-            st.session_state.number_of_refreshes = 1
-        else:
-            st.session_state.number_of_refreshes += 1
+    input_text = st.chat_input("Pregunta al asistente...")
 
-        st.title("Asitente virtual Herogra")
-        st.image(logo)
+    st.write("Input text:")
+    st.write(input_text)
+    st.write("End input text")
 
-        # Prepare the assitant if it is the first session:
-        # For some reason streamlit cloud reruns the app 2 times before
-        if st.session_state.number_of_refreshes <= 2:
-            print("We prepare the assistant")
-            with st.spinner("Preparing the assistant..."):
-                st.session_state.semantic_query_engine = SemanticQueryEngine(
-                    data_path = "data/data_by_sections",
-                    model_name = "gpt-4-32k"
-                )
+    if input_text:
+        with st.spinner("Generating response..."):
+            # Generate a response:
+            response = st.session_state.semantic_query_engine.execute_query(input_text)
 
-        show_chat_history(icon)
+            # Show the question:
+            with st.chat_message("user"):
+                st.write(input_text)
+            # Show the answer:
+            with st.chat_message("assistant", avatar=icon):
+                st.write(response)
 
-        st.write(st.session_state.number_of_refreshes)
-
-        input_text = st.chat_input("Pregunta al asistente...")
-
-        st.write("Input text:")
-        st.write(input_text)
-        st.write("End input text")
-
-        if input_text:
-            with st.spinner("Generating response..."):
-                # Generate a response:
-                response = st.session_state.semantic_query_engine.execute_query(input_text)
-
-                # Show the question:
-                with st.chat_message("user"):
-                    st.write(input_text)
-                # Show the answer:
-                with st.chat_message("assistant", avatar=icon):
-                    st.write(response)
-
-                # Store the question and the response to the chat memory of the session:
-                st.session_state.chat_history.append({"user": input_text, "avatar": response})
-                
-        with st.columns(2)[1]:
-            st.write("Powered by:")
-            st.image(gpt_logo, width=250)
-
-    elif authentication_status == False:
-        st.error('Username/password is incorrect')
-
-    elif authentication_status == None:
-        st.warning('Please enter your username and password')
+            # Store the question and the response to the chat memory of the session:
+            st.session_state.chat_history.append({"user": input_text, "avatar": response})
+            
+    with st.columns(2)[1]:
+        st.write("Powered by:")
+        st.image(gpt_logo, width=250)
 
 if __name__ == "__main__":
     main()
