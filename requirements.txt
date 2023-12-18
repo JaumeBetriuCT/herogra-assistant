@@ -2,6 +2,6 @@ streamlit
 Pillow
 langchain
 openai
-chromadb
-tiktoken
 pysqlite3-binary
+streamlit_authenticator
+semantic-kernel
