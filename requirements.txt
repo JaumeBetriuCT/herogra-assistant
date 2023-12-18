@@ -5,3 +5,4 @@ openai
 pysqlite3-binary
 streamlit-authenticator
 semantic-kernel
+pypdf
