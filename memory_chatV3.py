@@ -27,6 +27,11 @@ def main():
 
     st.set_page_config(page_icon=icon, page_title="Herogra assistant")
 
+    # Define the chat history:
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = []
+
+
     st.title("Asitente virtual Herogra")
     st.image(logo)
 
@@ -38,13 +43,7 @@ def main():
 
     show_chat_history(icon)
 
-    st.write(st.session_state.number_of_refreshes)
-
     input_text = st.chat_input("Pregunta al asistente...")
-
-    st.write("Input text:")
-    st.write(input_text)
-    st.write("End input text")
 
     if input_text:
         with st.spinner("Generating response..."):
