@@ -74,6 +74,7 @@ class SemanticQueryEngine:
         self.context_qa["products_info"] = products_info
 
         # Generate the response from the LLM:
+        print(self.qa(query, context=self.context_qa))
         response = self.qa(query, context=self.context_qa)["input"]
         
         # Update the memory of the assistant:
@@ -84,8 +85,8 @@ class SemanticQueryEngine:
 if __name__ == "__main__":
     
     semantic_query_engine = SemanticQueryEngine(
-        data_path = "/home/leibniz/Desktop/herogra-assistant/data/data_by_sections",
-        model_name = "gpt-4-32k"
+        data_path = "data/data_by_sections",
+        model_name = "gpt-35-16k"
     )
 
     query = "Que productos tienen como uso pertinente Fertilizante?"

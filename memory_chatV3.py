@@ -2,7 +2,6 @@ import streamlit as st
 
 from memory_chat_utils.semantic_query_engine import SemanticQueryEngine
 from PIL import Image
-from yaml.loader import SafeLoader
 
 def show_chat_history(avatar_icon) -> None:
     # Get the history:

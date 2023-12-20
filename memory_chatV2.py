@@ -33,17 +33,9 @@ def main():
 
     # Define if is is the first time the user enters the session or not:
     if "first_refresh_session" not in st.session_state:
-        st.write("No session state")
         st.session_state.first_refresh_session = True
     else:
-        st.write("Session state already fill:")
-        st.write(st.session_state.first_refresh_session)
         st.session_state.first_refresh_session = False
-
-    if "number_of_refreshes" not in st.session_state:
-        st.session_state.number_of_refreshes = 1
-    else:
-        st.session_state.number_of_refreshes += 1
 
     st.title("Asitente virtual Herogra")
     st.image(logo)
@@ -58,15 +50,11 @@ def main():
                 model_name = "gpt-4-32k"
             )
 
+            print("Assistant prepared")
+
     show_chat_history(icon)
 
-    st.write(st.session_state.number_of_refreshes)
-
     input_text = st.chat_input("Pregunta al asistente...")
-
-    st.write("Input text:")
-    st.write(input_text)
-    st.write("End input text")
 
     if input_text:
         with st.spinner("Generating response..."):

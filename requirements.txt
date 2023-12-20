@@ -1,9 +1,29 @@
-streamlit
-Pillow
-langchain
-openai
-streamlit-authenticator
-semantic-kernel
-pypdf
-tiktoken
-faiss-cpu
+# openai
+# streamlit
+# Pillow
+# semantic-kernel
+# langchain
+# pypdf
+# tiktoken
+# faiss-cpu
+
+# openai==1.5.0
+# streamlit==1.9.0
+# Pillow==9.1.0
+# semantic-kernel==1.2.4
+# langchain==1.3.9
+# pypdf==1.9.2
+# tiktoken==0.3.5
+# faiss-cpu==1.7.4
+
+openai==0.28.0
+streamlit==1.24
+Pillow==9.0.1
+semantic-kernel==0.3.13.dev0
+langchain==0.0.294
+pypdf==3.17.2
+tiktoken==0.5.1
+faiss-cpu==1.7.4
+
+# sudo docker build -t herogra-app .
+# sudo docker run -p 8501:8501 herogra-app

@@ -1,4 +1,5 @@
-from langchain.embeddings.openai import OpenAIEmbeddings
+# from langchain.embeddings import AzureOpenAIEmbeddings, OpenAIEmbeddings
+from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.document_loaders import PyPDFLoader
@@ -11,10 +12,17 @@ import re
 class VectorDatabase:
     """Class to interact with the vectordatabase"""
 
-    def __init__(self, data_path: str, chunk_size: int=400, chunk_overlap: int=100):
+    def __init__(self, data_path: str, chunk_size: int=200, chunk_overlap: int=50):
 
         self.data_path = data_path
         self.embeddings = OpenAIEmbeddings(openai_api_key=st.secrets["OPENAI_API_KEY"])
+
+        # os.environ["AZURE_OPENAI_API_KEY"] = st.secrets["AZURE_API_KEY_EMBEDDINGS"]
+        # os.environ["AZURE_OPENAI_ENDPOINT"] = st.secrets["ENDPOINT_EMBEDDINGS"]
+        # self.embeddings = AzureOpenAIEmbeddings(
+        #     azure_deployment = "ada-embeddings",
+        #     openai_api_version = "2023-05-15"
+        # )
 
         print("Creating vectordatabase...")
         self.vectorstore = self.create_vector_database(chunk_size, chunk_overlap)
@@ -108,7 +116,7 @@ class VectorDatabase:
 
         return output_string
 
-    def run_query(self, query: str, k: int=20, threshold: float=0.1) -> str:
+    def run_query(self, query: str, k: int=5, threshold: float=0.1) -> str:
         """
         From the k chunks of text with highest similarity to the query
         """
