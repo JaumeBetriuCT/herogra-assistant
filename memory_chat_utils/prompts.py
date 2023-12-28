@@ -12,7 +12,7 @@ QA_GENERATION_TEMPLATE_SK = """
     {{$question2}}: {{$response2}}
     Fin del contexto de la conversación.
     Nota 1: Si el contexto está vacío, simplemente ignóralo.
-    Nota 2: Contesta siempre que puedas de forma esquemática usando bulletpoints.
+    Nota 2: Contesta siempre que puedas de forma esquemática usando bulletpoints y muy resumido.
 
     Pregunta: {{$input}}
     Respuesta útil:

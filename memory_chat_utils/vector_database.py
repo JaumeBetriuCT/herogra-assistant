@@ -12,7 +12,7 @@ import re
 class VectorDatabase:
     """Class to interact with the vectordatabase"""
 
-    def __init__(self, data_path: str, chunk_size: int=200, chunk_overlap: int=50):
+    def __init__(self, data_path: str, action: str, chunk_size: int=400, chunk_overlap: int=100):
 
         self.data_path = data_path
         self.embeddings = OpenAIEmbeddings(openai_api_key=st.secrets["OPENAI_API_KEY"])
@@ -24,9 +24,18 @@ class VectorDatabase:
         #     openai_api_version = "2023-05-15"
         # )
 
-        print("Creating vectordatabase...")
-        self.vectorstore = self.create_vector_database(chunk_size, chunk_overlap)
-        print("Vectordatabase successfully created")
+        if action == "store":
+            print("Creating vectordatabase...")
+            vectorstore_to_store = self.create_vector_database(chunk_size, chunk_overlap)
+            
+            # Store the database:
+            vectorstore_to_store.save_local("faiss_db")
+            print("Vectordatabase successfully created and stored")
+        
+        if action == "load":
+            print("Loading database...")
+            self.vectorstore = FAISS.load_local("faiss_db", self.embeddings)
+            print("Database loaded")
 
     def create_vector_database(self, chunk_size: int, chunk_overlap: int) -> FAISS:
         """
@@ -38,6 +47,7 @@ class VectorDatabase:
             pdf_path = f"{self.data_path}/{file}"
             loader = PyPDFLoader(pdf_path)
             documents.extend(loader.load())
+            print(f"{pdf_path} added to the vector database")
 
         text_splitter = CharacterTextSplitter(
             chunk_size = chunk_size, 
@@ -53,12 +63,19 @@ class VectorDatabase:
         Cleans the name of the source of chunk extracted from the vector database
         """
 
-        # Pattern to be deleted:
-        pattern_section = "  Seccion_\d+\.pdf"
-        pattern_data_path = f"{self.data_path}/"
+        # Patterns to be deleted:
+        pattern_section = " Seccion_\d+\.pdf"
+        # pattern_data_path = f"{self.data_path}/"
+        pattern_data_path = "data/data_by_sections/"
+        print(pattern_data_path)
+        print(source)
 
         # Return the source without the section name and the data_path to keep only product name
-        return re.sub(pattern_section, "", source).replace(pattern_data_path, "").replace(" - ", "")
+        cleaned_source = re.sub(pattern_section, "", source).replace(pattern_data_path, "").replace(" - ", "")
+
+        print(cleaned_source)
+
+        return cleaned_source
     
     def filter_chunks(self, chunks: List, threshold: float) -> List:
         """
@@ -116,7 +133,7 @@ class VectorDatabase:
 
         return output_string
 
-    def run_query(self, query: str, k: int=5, threshold: float=0.1) -> str:
+    def run_query(self, query: str, k: int=15, threshold: float=0.1) -> str:
         """
         From the k chunks of text with highest similarity to the query
         """

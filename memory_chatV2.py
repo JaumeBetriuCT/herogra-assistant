@@ -31,26 +31,27 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
 
-    # Define if is is the first time the user enters the session or not:
-    if "first_refresh_session" not in st.session_state:
-        st.session_state.first_refresh_session = True
-    else:
-        st.session_state.first_refresh_session = False
+    # # Define if is is the first time the user enters the session or not:
+    # if "first_refresh_session" not in st.session_state:
+    #     st.session_state["first_refresh_session"] = "first_session"
 
     st.title("Asitente virtual Herogra")
     st.image(logo)
 
-    # Prepare the assitant if it is the first session:
-    # For some reason streamlit cloud reruns the app 2 times before
-    if st.session_state.first_refresh_session:
-        print("We prepare the assistant")
-        with st.spinner("Preparing the assistant..."):
-            st.session_state.semantic_query_engine = SemanticQueryEngine(
-                data_path = "data/data_by_sections",
-                model_name = "gpt-4-32k"
-            )
+    # # Prepare the assitant if it is the first session:
+    # if st.session_state["first_refresh_session"] == "first_session":
+    #     print(st.session_state["first_refresh_session"])
+    #     print("We prepare the assistant")
+    #     with st.spinner("Preparing the assistant..."):
+    #         st.session_state.semantic_query_engine = SemanticQueryEngine(
+    #             data_path = "data/data_by_sections",
+    #             model_name = "gpt-4-32k"
+    #         )
 
-            print("Assistant prepared")
+    #         print("Assistant prepared")
+
+    #         # Set the refresh session to false so the the database does not get created again
+    #         st.session_state["first_refresh_session"] = "other_session"
 
     show_chat_history(icon)
 
@@ -58,8 +59,14 @@ def main():
 
     if input_text:
         with st.spinner("Generating response..."):
+            # Create the assistant:
+            semantic_query_engine = SemanticQueryEngine(
+                data_path = "data/data_by_sections",
+                model_name = "gpt-4-32k"
+            )
+
             # Generate a response:
-            response = st.session_state.semantic_query_engine.execute_query(input_text)
+            response = semantic_query_engine.execute_query(input_text)
 
             # Show the question:
             with st.chat_message("user"):

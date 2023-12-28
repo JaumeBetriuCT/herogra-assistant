@@ -2,7 +2,7 @@ import semantic_kernel as sk
 import streamlit as st
 
 from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion
-from memory_chat_utils.prompts import QA_GENERATION_TEMPLATE_SK2
+from memory_chat_utils.prompts import QA_GENERATION_TEMPLATE_SK2, QA_GENERATION_TEMPLATE_SK
 from memory_chat_utils.vector_database import VectorDatabase
 from typing import Tuple
 
@@ -11,7 +11,7 @@ class SemanticQueryEngine:
     def __init__(self, data_path: str, model_name: str):
         
         # Create the vector database using the files in the data_path
-        self.vector_database = VectorDatabase(data_path)
+        self.vector_database = VectorDatabase(data_path, action="load")
         # Define the kernel:
         self.kernel = sk.Kernel()
 
@@ -30,7 +30,10 @@ class SemanticQueryEngine:
         self.kernel.add_chat_service("qa", llm)
         self.context_qa = self.kernel.create_new_context()
         self.initialize_memory()
-        self.qa = self.kernel.create_semantic_function(QA_GENERATION_TEMPLATE_SK2)
+        self.qa = self.kernel.create_semantic_function(
+            prompt_template = QA_GENERATION_TEMPLATE_SK, 
+            max_tokens = 2000
+        )
 
     def initialize_memory(self) -> None:
         """
@@ -74,8 +77,9 @@ class SemanticQueryEngine:
         self.context_qa["products_info"] = products_info
 
         # Generate the response from the LLM:
-        print(self.qa(query, context=self.context_qa))
         response = self.qa(query, context=self.context_qa)["input"]
+        print("Response:")
+        print(response)
         
         # Update the memory of the assistant:
         self.update_qa_memory(question=query, response=response)
