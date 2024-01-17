@@ -21,7 +21,7 @@ def show_chat_history(avatar_icon) -> None:
 
 def main():
     logo = Image.open('images/herogra_logo.png')
-    gpt_logo = Image.open("images/Chat_gpt_logo.png")
+    gpt_logo = Image.open("images/logo_dqs.png")
     icon = Image.open("images/herogra_icon.png")
 
     st.set_page_config(page_icon=icon, page_title="Herogra assistant")

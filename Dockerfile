@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt
 
 EXPOSE 8501
 
-CMD python create_vector_database.py && streamlit run memory_chatV2.py
+CMD python create_vector_database.py && streamlit run memory_chatV3.py
 
 # docker run \
 #     --name neo4j \
