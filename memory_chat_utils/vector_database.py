@@ -176,6 +176,8 @@ class VectorDatabase:
 
 if __name__ == "__main__":
     
-    vector_database = VectorDatabase(data_path="/home/leibniz/Desktop/herogra-assistant/data/data_by_sections")
+    vector_database = VectorDatabase(data_path="/home/leibniz/Desktop/herogra-assistant/data/data_by_sections", action="load")
 
     result = vector_database.run_query("Que productos estan clasificados como inflamables, explosivos o comburente?")
+
+    print(result)
